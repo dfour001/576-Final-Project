@@ -1,0 +1,70 @@
+body {
+    background-color: steelblue;
+}
+
+navbar-toggler {
+    padding: 0px 10px;
+}
+
+
+#map {
+    position: fixed;
+    top: 115px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+/****************
+** Year Slider **
+*****************/
+.slider-container {
+    margin-top: 60px;
+    width: 100%;
+}
+
+#slider {
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+/* Slider Labels */
+.slider-labels {
+    position: relative;
+    background-color: red;
+}
+#lblStartYear {
+    position: absolute;
+    left: 10px;
+}
+
+#lblSlider {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+#lblEndYear {
+    position: absolute;
+    right: 10px;
+}
+
+/* Slider Handle */
+.noUi-horizontal .noUi-handle {
+    height: 20px;
+    top: -2px;
+    right: -10px;
+    width: 20px;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+
+
+
+.leaflet-container {
+    z-index: 0;
+}
