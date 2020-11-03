@@ -1,0 +1,52 @@
+@font-face {
+    font-family: ironick;
+    src: url(../fonts/IronickNF.ttf);
+}
+
+@font-face {
+    font-family: dyer;
+    src: url(../fonts/Dyer.ttf);
+}
+
+@font-face {
+    font-family: dubba;
+    src: url(fonts/DubbaDubbaNF.ttf);
+}
+
+@font-face {
+    font-family: coventry;
+    src: url(fonts/CoventryGarden.ttf);
+}
+
+@font-face {
+    font-family: fog04;
+    src: url(../fonts/FoglihtenDeH04.otf);
+}
+
+.ironick {
+    font-family: ironick;
+}
+
+.dyer {
+    font-family: dyer;
+}
+
+.dubba {
+    font-family: dubba;
+}
+
+.coventry {
+    font-family: coventry;
+}
+
+.fog04 {
+    font-family: fog04;
+}
+
+.color-white {
+    color: #d4d2ce;
+}
+
+.color-gold {
+    color: #cd8e2f;
+}

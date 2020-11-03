@@ -1,5 +1,6 @@
 body {
     background-color: steelblue;
+    overflow: hidden;
 }
 
 navbar-toggler {
@@ -34,6 +35,7 @@ navbar-toggler {
     position: relative;
     background-color: red;
 }
+
 #lblStartYear {
     position: absolute;
     left: 10px;
@@ -59,11 +61,88 @@ navbar-toggler {
     width: 20px;
 }
 
-.noUi-handle:after, .noUi-handle:before {
+.noUi-handle:after,
+.noUi-handle:before {
     display: none;
 }
 
+/*********************
+*** Loading Screen ***
+*********************/
+#loading {
+    z-index: 9999;
+    background-image: url(../img/Pattern10Navy.jpg);
+}
 
+.full-screen {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.gradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.back-square {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    top: 100px;
+    left: calc(50% - 100px);
+    border: 7px double #cd8e2f;
+    background-color: #273848;
+}
+
+.front-square p {
+    position: relative;
+    z-index: 99993;
+    color: #d4d3ce;
+    transform: rotate(-45deg);
+    left: -100px;
+    text-align: left;
+    border: 2px solid red;
+}
+
+.front-square {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    top: 100px;
+    left: calc(50% - 100px);
+    transform: rotate(45deg);
+    border: 4px solid #cd8e2f;
+    background-color: #273848;
+    z-index: 99992;
+}
+
+.load-labels {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    top: 70px;
+    left: calc(50% - 100px);
+    z-index: 99993;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.load-labels h3 {
+    margin: 0px;
+}
+.loading-border {
+    margin: -10px;
+}
+#loadingStatus {
+    margin: -10px;
+}
+
+.load-labels p {
+    margin: 0px;
+}
 
 .leaflet-container {
     z-index: 0;
