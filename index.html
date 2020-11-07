@@ -31,7 +31,7 @@
 
 <body>
     <!-- Loading Screen -->
-    <!--
+
     <div id="loading" class="full-screen">
         <div class="full-screen gradient"></div>
         <div class="back-square"></div>
@@ -41,58 +41,58 @@
 
 
             <h3 class="color-white dyer">Time Machine</h3>
-<br>
+            <br>
             <p class="color-gold fog04">6</p>
-            <p id="loadingStatus" class="color-gold ironick">Initializing Flux Capacitor</p>
+            <p id="loadingStatus" class="color-gold ironick">- Loading -</p>
             <p class="color-gold fog04">7</p>
         </div>
 
     </div>
--->
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand pull-left" href="#">Richmond Time Machine</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse pull-right" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter By Neighborhood</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Legend</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
+    <div id="main">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand pull-left" href="#">Richmond Time Machine</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter By Neighborhood</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Legend</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <!-- Year filter slider -->
+        <div class="slider-container">
+            <div id="slider"></div>
         </div>
-    </nav>
 
-    <!-- Year filter slider -->
-    <div class="slider-container">
-        <div id="slider"></div>
+        <div class="slider-labels">
+            <p id="lblStartYear">Start Year</p>
+            <p id="lblSlider">Filter by Year</p>
+            <p id="lblEndYear">End Year</p>
+        </div>
+
+        <!-- Main Map -->
+        <div id="map"></div>
+
     </div>
-
-    <div class="slider-labels">
-        <p id="lblStartYear">Start Year</p>
-        <p id="lblSlider">Filter by Year</p>
-        <p id="lblEndYear">End Year</p>
-    </div>
-
-    <!-- Main Map -->
-    <div id="map"></div>
-
-    <!-- Year Filter -->
 
 
     <!-- Modals -->
