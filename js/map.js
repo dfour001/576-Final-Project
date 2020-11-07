@@ -11,3 +11,7 @@ var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/to
 	maxZoom: 20,
 	ext: 'png'
 }).addTo(map);
+
+map.on('click', function(e) {
+    alert(e.latlng);
+})

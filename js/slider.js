@@ -18,4 +18,9 @@ slider.noUiSlider.on('update', function() {
 
 slider.noUiSlider.on('set', function() {
     // The code to run to filter the points by year will go here
+    let values = slider.noUiSlider.get();
+    let startDate = values[0];
+    let endDate = values[1];
+    add_image_markers(startDate, endDate);
+    add_slideshow_markers(startDate, endDate);
 })
