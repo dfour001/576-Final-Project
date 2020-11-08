@@ -35,5 +35,31 @@
 	],
 	"slideshows": [
 
-	]
+	],
+    "neighborhoods": [
+        {
+            "name": "Court End",
+            "count": 2
+        },
+        {
+            "name": "Jackson Ward",
+            "count": 5
+        },
+        {
+            "name": "Monroe Ward",
+            "count": 0
+        },
+        {
+            "name": "Midtown",
+            "count": 43
+        },
+        {
+            "name": "The River District",
+            "count": 5
+        },
+        {
+            "name": "Shockoe Slip",
+            "count": 7
+        }
+    ]
 }

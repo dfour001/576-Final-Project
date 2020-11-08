@@ -1,11 +1,12 @@
-// Initialize images and slideshows data
+// Initialize images and slideshows data as global variables
 var images;
 var slideshows;
 
 var imageMarkers = L.featureGroup([]).addTo(map);
 var slideshowMarkers = L.featureGroup([]).addTo(map);
 
-// Functions for adding images and slideshows
+
+// Functions for adding image and slideshow markers to the map
 function add_image_markers(startDate = 0, endDate = 9999) {
     // Remove existing layers before adding new ones
     imageMarkers.clearLayers();
@@ -31,8 +32,9 @@ function add_image_markers(startDate = 0, endDate = 9999) {
             }
         }
 
+        // Zoom map to extent of image markers
         if (imageMarkers.getLayers().length > 0) {
-            setTimeout(function () {
+            setTimeout(function () { // Timeout set to avoid bug of zooming before markers are added
                 map.flyToBounds(imageMarkers.getBounds());
             }, 250);
         }
@@ -55,6 +57,28 @@ function add_slideshow_markers(startDate = 0, endDate = 9999) {
     }
 }
 
+
+// Add neighborhood filter data
+function create_neighborhood_filter(neighborhoods) {
+    // Find total number of points
+    let total = imageMarkers.getLayers().length + slideshowMarkers.getLayers().length;
+    
+    // Build html for neighborhood filter
+    let html = '';
+    
+    // Filter by all neighborhoods:
+    html += '<a class="dropdown-item" href="#">Show All <span class="badge badge-pill badge-primary">' + total + '</span></a><hr>';
+    
+    // Filter by individual neighborhoods:
+    for (let i = 0; i < neighborhoods.length; i++) {
+        let n = neighborhoods[i];
+        html += '<a class="dropdown-item" href="#">' + n.name + ' <span class="badge badge-pill badge-primary">' + n.count + '</span></a>';
+    }
+    
+    
+    $('#neighborhoodFilter').html(html);
+}
+
 $(document).ready(function () {
     // Splash screen is displayed
     // Load data from database
@@ -65,9 +89,11 @@ $(document).ready(function () {
             console.log("Success!");
             images = d.images;
             slideshows = d.slideshows;
+            let neighborhoods = d.neighborhoods;
 
             add_image_markers();
             add_slideshow_markers();
+            create_neighborhood_filter(neighborhoods);
 
             // Show main site under splash screen
             $('#main').show();
