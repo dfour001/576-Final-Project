@@ -1,4 +1,9 @@
 @font-face {
+    font-family: borders;
+    src: url(../fonts/DecoBordersNF.ttf);
+}
+
+@font-face {
     font-family: ironick;
     src: url(../fonts/IronickNF.ttf);
 }
@@ -10,12 +15,12 @@
 
 @font-face {
     font-family: dubba;
-    src: url(fonts/DubbaDubbaNF.ttf);
+    src: url(../fonts/DubbaDubbaNF.ttf);
 }
 
 @font-face {
     font-family: coventry;
-    src: url(fonts/CoventryGarden.ttf);
+    src: url(../fonts/CoventryGarden.ttf);
 }
 
 @font-face {
@@ -41,6 +46,10 @@
 
 .fog04 {
     font-family: fog04;
+}
+
+.borders {
+    font-family: borders;
 }
 
 .color-white {

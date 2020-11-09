@@ -10,9 +10,6 @@
 
     <title>GEOG 576 Final Project</title>
 
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="apple-touch-icon" href="">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -31,7 +28,7 @@
 
 <body>
     <!-- Loading Screen -->
-
+    <!--
     <div id="loading" class="full-screen">
         <div class="full-screen gradient"></div>
         <div class="back-square"></div>
@@ -48,56 +45,33 @@
         </div>
 
     </div>
+-->
 
-    <div id="main">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand pull-left" href="#">Richmond Time Machine</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse pull-right" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter By Neighborhood</a>
-                            <div id="neighborhoodFilter" class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="#">Action <span class="badge badge-pill badge-primary">1</span></a>
-                                <a class="dropdown-item" href="#">Another action <span class="badge badge-primary">1</span></a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Legend</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Year filter slider -->
-        <div class="slider-container">
-            <div id="slider"></div>
-        </div>
-
-        <div class="slider-labels">
-            <p id="lblStartYear">Start Year</p>
-            <p id="lblSlider">Filter by Year</p>
-            <p id="lblEndYear">End Year</p>
-        </div>
-
-        <!-- Main Map -->
-        <div id="map"></div>
-
-    </div>
-
-
-<!-- Modals -->
+    <!-- Modals -->
 
     <!-- Image Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Insert content here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Large modal -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#imgModal">
+        Large modal
+    </button>
+
     <div id="imgModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -112,7 +86,7 @@
                     <div class="picture-frame">
                         <h4 id="imgTitle" class="color-gold dubba">This is the image title!</h4>
                         <h1 class="color-gold fog04">1</h1>
-                        <img id="imgImg" src="https://picsum.photos/500/300">
+                        <img src="https://picsum.photos/500/300">
                         <p id="imgDescription" class="color-gold text-left">Ah, I'm...I'm fine. Thanks. (He turns and spots Doc. He heads over to him. Doc is smelling a flower that was given to him by Clara.) Doc. What are you doing? (stops sniffing) Oh, nothing...just out enjoying the morning air. It's really lovely here in the morning, don't you think? Yeah, it's lovely Doc. Listen, we gotta load the Delorean. We gotta get ready to roll alright...(he spots the tombstone from the picture) hey look at that, the tombstone.</p>
                         <p id="imgUserName" class="color-gold text-right mr-3">- CoolMuseum</p>
                         <button type="button" class="btn color-gold" data-dismiss="modal">Close</button>
@@ -121,10 +95,11 @@
             </div>
         </div>
     </div>
-    
+
+
     <!-- Legend Modal -->
-    
-    
+
+
     <!-- About Modal -->
 
 
@@ -139,7 +114,4 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- My JS -->
-    <script src="js/map.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/slider.js"></script>
 </body></html>

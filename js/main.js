@@ -26,7 +26,10 @@ function add_image_markers(startDate = 0, endDate = 9999) {
                     "imgURL": img.imgURL,
                     "direction": img.direction
                 };
-
+                
+                // Set marker pop-up event
+                marker.on('click', function(){open_img_modal(marker.attributes)});
+               // marker.on('click', open_img_modal(marker.attributes));
 
                 imageMarkers.addLayer(marker);
             }
@@ -55,6 +58,20 @@ function add_slideshow_markers(startDate = 0, endDate = 9999) {
     } else {
         console.log("No slideshows to add");
     }
+}
+
+
+// Opens image modal
+function open_img_modal(attr) {
+    // Setup modal with input attributes
+    $('#imgYear').html(attr.year);
+    $('#imgTitle').html(attr.title);
+    $('#imgImg').attr('src', 'https://picsum.photos/500/300');
+    $('#imgDescription').html(attr.description);
+    $('#imgUserName').html('- ' + attr.userName);
+    
+    // Open modal
+    $('#imgModal').modal('show');
 }
 
 
