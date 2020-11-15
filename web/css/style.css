@@ -183,7 +183,7 @@ navbar-toggler {
 }
 
 .year-frame {
-    width: fit-content;
+    display: inline-block;
     padding-left: 25px;
     padding-right: 25px;
     border-top-left-radius: 33%;
@@ -229,6 +229,12 @@ navbar-toggler {
     max-width: 100%;
 }
 
+.close {
+    width: 25px;
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+}
 .close:hover {
     color: #d4d2ce;
 }

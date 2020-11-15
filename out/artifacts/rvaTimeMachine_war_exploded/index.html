@@ -37,7 +37,7 @@
         <div class="back-square"></div>
         <div class="front-square"></div>
         <div class="load-labels">
-            <h3 class="color-white ironick">Richmond</h3>
+            <h3 id="cityName" class="color-white ironick">Richmond</h3>
 
 
             <h3 class="color-white dyer">Time Machine</h3>
@@ -99,11 +99,11 @@
 
     <!-- Image Modal -->
     <div id="imgModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="full-modal gradient"></div>
+                <button type="button" class="close color-gold dubba mr-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="img-content">
-                    <button type="button" class="close color-gold dubba mr-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <div class="year-frame">
                         <p class="color-gold fog04">6</p>
                         <p id="imgYear" class="color-gold ironick">1965</p>
@@ -139,6 +139,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- My JS -->
+    <script src="js/config.js"></script>
     <script src="js/map.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>

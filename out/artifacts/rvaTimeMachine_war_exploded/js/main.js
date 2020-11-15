@@ -98,12 +98,16 @@ function create_neighborhood_filter(neighborhoods) {
 
 $(document).ready(function () {
     // Splash screen is displayed
+    $('#cityName').html(config.cityName);
+    console.log(config.dbURL);
     // Load data from database
     $.ajax({
-        url: "js/testData.json",
-        dataType: "json",
+        method: 'POST',
+        url: config.dbURL,
+        dataType: "JSON",
         success: function (d) {
             console.log("Success!");
+            console.log(d);
             images = d.images;
             slideshows = d.slideshows;
             let neighborhoods = d.neighborhoods;
@@ -127,6 +131,9 @@ $(document).ready(function () {
         error: function (x, y, z) {
             // Update error message in splash screen
             $('#loadingStatus').html('Error loading images! :(').addClass('color-red');
+            console.log(x);
+            console.log(y);
+            console.log(z);
         }
     })
 
