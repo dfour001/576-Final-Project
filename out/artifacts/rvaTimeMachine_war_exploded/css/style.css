@@ -1,10 +1,46 @@
 body {
-    background-color: steelblue;
+    background-color: #273848;
     overflow: hidden;
+
 }
 
 navbar-toggler {
     padding: 0px 10px;
+}
+
+.navbar {
+    background: rgb(39, 56, 72);
+    background: linear-gradient(39deg, rgba(39, 56, 72, 1) 0%, rgba(17, 20, 23, 1) 100%);
+    border-bottom: 6px double #cd8e2f;
+}
+
+.navbar-collapse a {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #d4d2ce;
+}
+
+.navbar-collapse a:hover {
+    color: #cd8e2f;
+}
+
+#neighborhoodFilter {
+    background: rgb(39, 56, 72);
+    background: linear-gradient(39deg, rgba(39, 56, 72, 1) 0%, rgba(17, 20, 23, 1) 100%);
+    border: 6px double #cd8e2f;
+    border-radius: 0px;
+    border-bottom-left-radius: 25px;
+    padding-bottom: 15px
+}
+
+#neighborhoodFilter a:hover {
+    background-color: #273848;
+}
+
+#neighborhoodFilter hr {
+    border-color: #d4d2ce;
+    margin-left: 0px;
+    margin-right: 25px;
 }
 
 #main {
@@ -13,7 +49,7 @@ navbar-toggler {
 
 #map {
     position: fixed;
-    top: 115px;
+    top: 125px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -36,13 +72,26 @@ navbar-toggler {
 ** Year Slider **
 *****************/
 .slider-container {
-    margin-top: 60px;
+    margin-top: 70px;
     width: 100%;
 }
 
 #slider {
     margin: 20px;
     margin-bottom: 5px;
+}
+
+.noUi-connects {
+    background-color: #353535;
+    border-color: blue;
+}
+
+.noUi-connect {
+    background: rgb(212, 211, 206);
+    background: linear-gradient(0deg, rgba(212, 211, 206, 1) 0%, rgba(238, 238, 233, 1) 50%, rgba(212, 211, 206, 1) 100%);
+
+    background: rgb(55, 80, 105);
+    background: linear-gradient(0deg, rgba(55, 80, 105, 1) 0%, rgba(86, 121, 156, 1) 50%, rgba(55, 80, 105, 1) 100%);
 }
 
 /* Slider Labels */
@@ -148,9 +197,11 @@ navbar-toggler {
 .load-labels h3 {
     margin: 0px;
 }
+
 .loading-border {
     margin: -10px;
 }
+
 #loadingStatus {
     margin: -10px;
 }
@@ -235,6 +286,7 @@ navbar-toggler {
     right: 0px;
     z-index: 99;
 }
+
 .close:hover {
     color: #d4d2ce;
 }
