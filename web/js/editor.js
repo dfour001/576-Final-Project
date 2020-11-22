@@ -65,3 +65,5 @@ map.on('click', function (e) {
         $('#mapNotification').slideUp();
     }
 });
+
+$('#editFormModal-Slideshow').modal('show');
