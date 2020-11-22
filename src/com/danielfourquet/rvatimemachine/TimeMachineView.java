@@ -15,47 +15,14 @@ import java.util.HashMap;
 @WebServlet("/TimeMachineView")
 public class TimeMachineView extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("---- DOPOST REACHED ----");
         JSONObject json = new JSONObject();
         DbUtil db = new DbUtil();
         try {
             // Get Images
-            JSONArray imgList = new JSONArray();
-
-            ResultSet r = db.queryDB("select id, year, title, description, username, imgurl, direction, ST_Y(geom) lat, ST_X(geom) lng from images");
-            if (r != null) {
-                while (r.next()) {
-                    JSONObject img = new JSONObject();
-                    img.put("id", r.getString("id"));
-                    img.put("year", r.getString("year"));
-                    img.put("title", r.getString("title"));
-                    img.put("description", r.getString("description"));
-                    img.put("userName", r.getString("username"));
-                    img.put("imgURL", r.getString("imgurl"));
-                    img.put("direction", r.getString("direction"));
-                    img.put("lat", r.getString("lat"));
-                    img.put("lng", r.getString("lng"));
-                    imgList.put(img);
-                }
-            }
+            JSONArray imgList = db.get_images(null);
 
             // Get Slideshows
-            JSONArray slideshowList = new JSONArray();
-
-            r = db.queryDB("select id, year, title, description, username, imgurl, ST_Y(geom) lat, ST_X(geom) lng from slideshows");
-            if (r != null) {
-                while (r.next()) {
-                    JSONObject s = new JSONObject();
-                    s.put("id", r.getString("id"));
-                    s.put("year", r.getString("year"));
-                    s.put("title", r.getString("title"));
-                    s.put("description", r.getString("description"));
-                    s.put("username", r.getString("username"));
-                    s.put("imgurl", r.getString("imgurl"));
-                    s.put("lat", r.getString("lat"));
-                    s.put("lng", r.getString("lng"));
-                }
-            }
+            JSONArray slideshowList = db.get_slideshow(null);
 
             // Get Neighborhoods
             JSONArray nList = new JSONArray();

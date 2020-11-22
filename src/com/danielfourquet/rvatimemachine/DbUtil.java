@@ -1,5 +1,8 @@
 package com.danielfourquet.rvatimemachine;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -75,5 +78,81 @@ public class DbUtil {
             System.out.println("There are " + res.getString("count") + " images.");
         }
 
+    }
+
+    public JSONArray get_images(String UserIDFilter) {
+        JSONArray imgList = new JSONArray();
+
+        // Base sql query to return all image markers
+        String sql = "select id, year, title, description, username, imgurl, direction, ST_Y(geom) lat, ST_X(geom) lng from images";
+
+        // If filtering by user name (in edit mode), add where clause
+        if (UserIDFilter != null) {
+                sql += " where username = '" + UserIDFilter + "'";
+        }
+
+        // Send query to database
+        ResultSet r = queryDB(sql);
+
+        // Build imgList json array containing images
+        try {
+            if (r != null) {
+                while (r.next()) {
+                    JSONObject img = new JSONObject();
+                    img.put("id", r.getString("id"));
+                    img.put("year", r.getString("year"));
+                    img.put("title", r.getString("title"));
+                    img.put("description", r.getString("description"));
+                    img.put("userName", r.getString("username"));
+                    img.put("imgURL", r.getString("imgurl"));
+                    img.put("direction", r.getString("direction"));
+                    img.put("lat", r.getString("lat"));
+                    img.put("lng", r.getString("lng"));
+                    imgList.put(img);
+                }
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return imgList;
+    }
+
+    public JSONArray get_slideshow(String UserIDFilter) {
+        JSONArray slideshowList = new JSONArray();
+
+        // Base sql query to return all image markers
+        String sql = "select id, year, title, description, username, imgurl, ST_Y(geom) lat, ST_X(geom) lng from slideshows";
+
+        // If filtering by user name (in edit mode), add where clause
+        if (UserIDFilter == null) {
+            sql += " where username = '" + UserIDFilter + "'";
+        }
+
+        // Send query to database
+        ResultSet r = queryDB(sql);
+
+        // Build slideshowList json array containing images
+        try {
+            if (r != null) {
+                while (r.next()) {
+                    JSONObject s = new JSONObject();
+                    s.put("id", r.getString("id"));
+                    s.put("year", r.getString("year"));
+                    s.put("title", r.getString("title"));
+                    s.put("description", r.getString("description"));
+                    s.put("username", r.getString("username"));
+                    s.put("imgurl", r.getString("imgurl"));
+                    s.put("lat", r.getString("lat"));
+                    s.put("lng", r.getString("lng"));
+                }
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return slideshowList;
     }
 }
