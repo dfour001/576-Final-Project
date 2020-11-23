@@ -8,28 +8,81 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.ResultSet;
 
-@WebServlet(name = "TimeMachineEdit")
+@WebServlet("/TimeMachineEdit")
 public class TimeMachineEdit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("-- TIMEMACHINEEDIT REACHED --");
+        HttpSession session = request.getSession();
+
+        // Determines the operation that needs to be performed (load, insert, update, or delete)
         String op = request.getParameter("op");
+        System.out.println("op = " + op);
 
-        if (op == "load") {
-            load_user_data("TestUser", request, response);
+        // UserID
+        String userID = request.getParameter("userID");
+
+
+        if (op.equals("load")) {
+            System.out.println("Loading data...");
+            JSONObject data = load_user_data(userID, request, response);
+
+            System.out.println("Returning data...");
+            try {
+                response.getWriter().write(data.toString());
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
 
-        if (op == "insert") {
+        if (op.equals("insert-image")) {
+            System.out.println("Inserting image...");
+            // Prep attributes
+            String year = request.getParameter("year");
+            String title = request.getParameter("title");
+            String description = request.getParameter("description");
+            String direction = request.getParameter("direction");
+            String username = (String)session.getAttribute("userID");
+            String lat = request.getParameter("lat");
+            String lng = request.getParameter("lng");
+
+            // Build sql
+            ///insert into images (year, title, description, username, direction, geom)
+            //values (2020, 'tite', 'desc', 'TestUser', 180, ST_SetSRID(ST_Point(-75,35), 4326))
+            String sql = "insert into images (year, title, description, usernamez, direction, geom) "
+                    + "values (" + year + ", '" + title + "', '" + description + "', '" + username + "', " + direction + ", ST_SetSRID(ST_Point(" + lng + "," + lat + "), 4326))";
+
+            // Send request to database
+            DbUtil db = new DbUtil();
+
+            try {
+                db.modifyDB(sql);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                session.setAttribute("message", "ERROR - Unable to create point");
+                response.sendRedirect("edit.jsp");
+            }
+
+            session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Image marker added to database.");
+            response.sendRedirect("edit.jsp");
+
+            // Reload edit.jsp
+
+
 
         }
 
-        if (op == "update") {
+        if (op.equals("update")) {
 
         }
 
-        if op == "delete" {
+        if (op.equals("delete")) {
 
         }
     }
@@ -38,10 +91,11 @@ public class TimeMachineEdit extends HttpServlet {
 
     }
 
-    private void load_user_data(String userID, HttpServletRequest request, HttpServletResponse
+    private JSONObject load_user_data(String userID, HttpServletRequest request, HttpServletResponse
             response) {
         JSONObject json = new JSONObject();
         DbUtil db = new DbUtil();
+
         try {
             // Get Images
             JSONArray imgList = db.get_images("TestUser");
@@ -86,6 +140,8 @@ public class TimeMachineEdit extends HttpServlet {
         System.out.println("---- Data Returned ----");
         System.out.println(json.toString());
         // Return data to client
-        response.getWriter().write(json.toString());
+
+        return json;
+
     }
 }
