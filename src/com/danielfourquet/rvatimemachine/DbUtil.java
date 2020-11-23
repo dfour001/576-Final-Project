@@ -54,7 +54,7 @@ public class DbUtil {
 
     // execute a sql query (e.g. INSERT) to modify the database;
     // no return value needed
-    public void modifyDB(String sql) {
+    public boolean modifyDB(String sql) {
         Connection conn = connectDB();
         try {
             if (conn != null) {
@@ -62,10 +62,13 @@ public class DbUtil {
                 stmt.execute(sql);
                 stmt.close();
                 conn.close();
+
             }
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
+        return true;
     }
 
 
@@ -90,6 +93,8 @@ public class DbUtil {
         if (UserIDFilter != null) {
                 sql += " where username = '" + UserIDFilter + "'";
         }
+
+        System.out.println(sql);
 
         // Send query to database
         ResultSet r = queryDB(sql);

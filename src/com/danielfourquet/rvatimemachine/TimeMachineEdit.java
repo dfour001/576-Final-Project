@@ -2,6 +2,7 @@ package com.danielfourquet.rvatimemachine;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.postgresql.util.PSQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +24,7 @@ public class TimeMachineEdit extends HttpServlet {
         System.out.println("op = " + op);
 
         // UserID
-        String userID = request.getParameter("userID");
+        String userID = (String)session.getAttribute("userID");
 
 
         if (op.equals("load")) {
@@ -41,40 +42,7 @@ public class TimeMachineEdit extends HttpServlet {
 
 
         if (op.equals("insert-image")) {
-            System.out.println("Inserting image...");
-            // Prep attributes
-            String year = request.getParameter("year");
-            String title = request.getParameter("title");
-            String description = request.getParameter("description");
-            String direction = request.getParameter("direction");
-            String username = (String)session.getAttribute("userID");
-            String lat = request.getParameter("lat");
-            String lng = request.getParameter("lng");
-
-            // Build sql
-            ///insert into images (year, title, description, username, direction, geom)
-            //values (2020, 'tite', 'desc', 'TestUser', 180, ST_SetSRID(ST_Point(-75,35), 4326))
-            String sql = "insert into images (year, title, description, usernamez, direction, geom) "
-                    + "values (" + year + ", '" + title + "', '" + description + "', '" + username + "', " + direction + ", ST_SetSRID(ST_Point(" + lng + "," + lat + "), 4326))";
-
-            // Send request to database
-            DbUtil db = new DbUtil();
-
-            try {
-                db.modifyDB(sql);
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-                session.setAttribute("message", "ERROR - Unable to create point");
-                response.sendRedirect("edit.jsp");
-            }
-
-            session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Image marker added to database.");
-            response.sendRedirect("edit.jsp");
-
-            // Reload edit.jsp
-
-
+            insert_image(request, response, session);
 
         }
 
@@ -98,10 +66,10 @@ public class TimeMachineEdit extends HttpServlet {
 
         try {
             // Get Images
-            JSONArray imgList = db.get_images("TestUser");
+            JSONArray imgList = db.get_images(userID);
 
             // Get Slideshows
-            JSONArray slideshowList = db.get_slideshow("TestUser");
+            JSONArray slideshowList = db.get_slideshow(userID);
 
             // Get Neighborhoods
             JSONArray nList = new JSONArray();
@@ -143,5 +111,43 @@ public class TimeMachineEdit extends HttpServlet {
 
         return json;
 
+    }
+
+    private void insert_image(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        System.out.println("Inserting image...");
+        // Prep attributes
+        String year = request.getParameter("year");
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String direction = request.getParameter("direction");
+        String username = (String)session.getAttribute("userID");
+        String lat = request.getParameter("lat");
+        String lng = request.getParameter("lng");
+
+        // Build sql
+        String sql = "insert into images (year, title, description, username, direction, geom) "
+                + "values (" + year + ", '" + title + "', '" + description + "', '" + username + "', " + direction + ", ST_SetSRID(ST_Point(" + lng + "," + lat + "), 4326))";
+
+        // Send request to database
+        DbUtil db = new DbUtil();
+
+        try {
+            if (db.modifyDB(sql)) {
+                session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Image marker added to database.");
+            }
+            else {
+                session.setAttribute("message", "ERROR - Unable to create point");
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            response.sendRedirect("edit.jsp");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

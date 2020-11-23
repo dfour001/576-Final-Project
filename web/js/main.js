@@ -16,7 +16,8 @@ function add_image_markers(startDate = 0, endDate = 9999) {
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.year >= startDate && img.year <= endDate) {
-                let marker = L.marker([img.lat, img.lng]);
+
+                let marker = L.marker([img.lat, img.lng], {rotationAngle: img.direction});
 
                 marker.attributes = {
                     "year": img.year,
@@ -30,6 +31,8 @@ function add_image_markers(startDate = 0, endDate = 9999) {
                 // Set marker pop-up event
                 marker.on('click', function(){open_img_modal(marker.attributes)});
                // marker.on('click', open_img_modal(marker.attributes));
+
+
 
                 imageMarkers.addLayer(marker);
             }
@@ -107,7 +110,6 @@ $(document).ready(function () {
         dataType: "JSON",
         success: function (d) {
             console.log("Success!");
-            console.log(d);
             images = d.images;
             slideshows = d.slideshows;
             let neighborhoods = d.neighborhoods;

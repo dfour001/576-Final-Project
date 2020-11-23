@@ -33,17 +33,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
+            <state relative-caret-position="687">
               <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
+            <state relative-caret-position="-323">
+              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding>
                 <element signature="e#3429#3436#1#HTML" expanded="true" />
               </folding>
@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
-              <caret line="122" column="10" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="122" selection-end-column="10" />
+              <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
               <folding>
                 <element signature="e#4375#4382#1" expanded="true" />
               </folding>
@@ -66,8 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+            <state relative-caret-position="170">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/lib/markerRotate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="52" selection-start-column="52" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -75,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/loginRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="374">
               <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
             </state>
           </provider>
@@ -84,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="255">
+              <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -93,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+            <state relative-caret-position="1173">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="-299">
               <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
             </state>
           </provider>
@@ -124,8 +133,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>notific</find>
-      <find>open_img_modal</find>
+      <find>userID</find>
+      <find>load_user_Data</find>
       <find>Submit</find>
+      <find>open_img_modal</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -140,17 +151,18 @@
         <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/js/config.js" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java" />
         <option value="$PROJECT_DIR$/web/edit/index.jsp" />
-        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java" />
         <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/loginRequest.java" />
         <option value="$PROJECT_DIR$/web/edit/logout.jsp" />
-        <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java" />
         <option value="$PROJECT_DIR$/web/js/editor.js" />
         <option value="$PROJECT_DIR$/web/edit.jsp" />
+        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/web/lib/markerRotate.js" />
       </list>
     </option>
   </component>
@@ -189,13 +201,12 @@
             <path>
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rvatimemachine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -206,19 +217,13 @@
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="edit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,7 +241,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="576-final-project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606091809521" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606103255784" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -278,6 +283,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.38" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="rvaTimeMachine:war exploded">
           <settings>
@@ -343,12 +349,12 @@
       <workItem from="1605413767568" duration="273000" />
       <workItem from="1605455080032" duration="13071000" />
       <workItem from="1605838514401" duration="4138000" />
-      <workItem from="1606066978060" duration="14069000" />
+      <workItem from="1606066978060" duration="22024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36488000" />
+    <option name="totallyTimeSpent" value="44443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,17 +369,17 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48768473" visible="true" weight="0.30181542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48768473" visible="true" weight="0.30181542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5123153" side_tool="true" visible="true" weight="0.30181542" />
+      <window_info id="Web" order="7" sideWeight="0.5123153" side_tool="true" weight="0.30181542" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33442622" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37540984" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,20 +476,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
+    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="122" column="10" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="122" selection-end-column="10" />
-          <folding>
-            <element signature="e#4375#4382#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="687">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+        <state relative-caret-position="1173">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -492,46 +502,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/loginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="374">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/editor.js">
+    <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+        <state relative-caret-position="256">
+          <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
+          <folding>
+            <element signature="e#4375#4382#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
+        <state relative-caret-position="-323">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
             <element signature="e#3429#3436#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lib/markerRotate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" selection-start-column="52" selection-end-column="52" />
         </state>
       </provider>
     </entry>
