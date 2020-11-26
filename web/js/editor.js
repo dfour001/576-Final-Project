@@ -25,7 +25,7 @@ function add_image_markers(startDate = 0, endDate = 9999) {
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.year >= startDate && img.year <= endDate) {
-                let marker = L.marker([img.lat, img.lng]);
+                let marker = L.marker([img.lat, img.lng], {rotationAngle: img.direction});
 
                 marker.attributes = {
                     "year": img.year,
@@ -130,6 +130,8 @@ map.on('click', function (e) {
         let latlng = e.latlng;
         $('#imgLat').val(latlng.lat);
         $('#imgLng').val(latlng.lng);
+        console.log("lat: " + latlng.lat);
+        console.log("lng: " + latlng.lng);
         // Show insert image form
         $('#editFormModal-Image').modal('show');
 
@@ -137,6 +139,14 @@ map.on('click', function (e) {
         setTimeout(function () {
             imgMap.invalidateSize();
         }, 250);
+
+
+        // Set imgMap to insert location
+        imgMap.setView(latlng, map.getZoom());
+
+        // Move marker to insert location
+        imgMapMarker.setLatLng(latlng);
+        imgMapMarker.setRotationAngle($('#direction').val());
 
         reset_insert_tools();
         $('#mapNotification').slideUp();        
@@ -147,6 +157,8 @@ map.on('click', function (e) {
         $('#mapNotification').slideUp();
     }
 });
+
+
 
 $(document).ready(function() {
     // Load data from database

@@ -42,10 +42,11 @@
 
 
     <div class="container-fluid">
+        <div class="full-screen gradient"></div>
         <div class="row">
             <div id="editMapContain" class="col-6 color-white">
                 <div id="editMap"></div>
-                <div id="mapNotification">Hi!</div>
+                <div id="mapNotification"></div>
                 <div class="editMapButtonContain">
                     <div id="btnAddImage" class="editMapButton color-gold dubba">Add Image</div>
                     <div id="btnAddSlideshow" class="editMapButton color-gold dubba">Add Slideshow</div>
@@ -129,9 +130,9 @@
                                         <br>
                                         <label for="description">Description:</label><br>
                                         <textarea type="text" name="description" id="description" class="full-width"></textarea>
-                                        <br>
-                                        <label for="direction">Direction:</label><br>
-                                        <input type="number" name="direction" id="direction" value="0" class="full-width">
+                                        <br><br>
+                                        <label for="direction">Direction (Which direction was the photographer looking?):</label><br>
+                                        <input type="text" class="dial" data-min="0" data-max="365" data-width="100" data-cursor=true data-step="1" data-thickness=.3 data-fgColor="#cd8e2f" value="1" id="direction" name="direction">
                                         <br><br>
                                         <label for="file">Load image file:</label><br>
                                         <input type="file" name="file" size="50" />
@@ -197,10 +198,23 @@
 
     <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="lib/markerRotate.js"></script>
 
     <!-- Custom JS -->
     <script src="js/editMap.js"></script>
     <script src="js/editor.js"></script>
+
+    <!-- knob control -->
+    <script src="lib/jquery.knob.js"></script>
+    <script>
+        $(function() {
+            $(".dial").knob({
+                'change': function(v) {
+                    imgMapMarker.setRotationAngle(v);
+                }
+            });
+        });
+    </script>
 
     <!-- Show notification if one is sent from the servet and clear message from session object -->
     <% if (session.getAttribute("message") != null) {
