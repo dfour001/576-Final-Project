@@ -15,6 +15,7 @@ var imageMarkers = L.featureGroup([]).addTo(map);
 var slideshowMarkers = L.featureGroup([]).addTo(map);
 
 
+
 // Functions for adding image and slideshow markers to the map
 function add_image_markers(startDate = 0, endDate = 9999) {
     // Remove existing layers before adding new ones
@@ -25,9 +26,13 @@ function add_image_markers(startDate = 0, endDate = 9999) {
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.year >= startDate && img.year <= endDate) {
-                let marker = L.marker([img.lat, img.lng], {rotationAngle: img.direction});
+                let marker = L.marker([img.lat, img.lng], {
+                    rotationAngle: img.direction,
+                    icon: cameraIcon
+                });
 
                 marker.attributes = {
+                    "id": img.id,
                     "year": img.year,
                     "title": img.title,
                     "description": img.description,
@@ -38,7 +43,9 @@ function add_image_markers(startDate = 0, endDate = 9999) {
 
                 // Set marker pop-up event
                 marker.on('click', function(){open_img_modal(marker.attributes)});
-                // marker.on('click', open_img_modal(marker.attributes));
+                
+                // Add row to image edit list
+                add_edit_row("#imageList", marker.attributes);
 
                 imageMarkers.addLayer(marker);
             }
@@ -83,6 +90,12 @@ function open_img_modal(attr) {
     $('#imgModal').modal('show');
 }
 
+
+// Adds row to the edit list on the right hand side of the screen
+function add_edit_row(list, attr) {
+    let row = '<div class="row datarow"><div class="col-10">'+ attr.year + ' - ' + attr.title + '</div><div class="col-1"><a href="#" class="icons btnEdit" data-id="' + attr.id + '" data-title="' + attr.title + '">n</a></div><div class="col-1"><a href="#" class="icons btnDelete"  data-id="' + attr.id + '" data-title="' + attr.title + '">&ugrave;</a></div></div>'
+    $(list).append(row);
+}
 
 // Notification System
 var notTimer; // Notification bar timeout object

@@ -64,10 +64,10 @@
                     <div class="card-body color-black">
                         <h4 class="card-title dubba">Image Markers</h4>
                         <hr>
-                        <p>1992 - Old Warehouse Full of Boxes</p>
+                        <div id="imageList"></div>
                         <h4 class="card-title dubba">Slideshows</h4>
                         <hr>
-                        <p>[data]</p>
+                        <div id="slideshowList"></div>
                     </div>
                     <h1 class="center color-gold fog04">7</h1>
                 </div>

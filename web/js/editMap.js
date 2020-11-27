@@ -28,4 +28,10 @@ var Stamen_TonerLite2 = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/t
 }).addTo(imgMap);
 
 // Image form marker
-var imgMapMarker = L.marker([0,0]).addTo(imgMap);
+var cameraIcon = L.icon({
+    iconUrl: '../img/camera.png',
+    iconSize: [30,30],
+    iconAnchor: [15,15]
+});
+
+var imgMapMarker = L.marker([0,0], {icon: cameraIcon}).addTo(imgMap);

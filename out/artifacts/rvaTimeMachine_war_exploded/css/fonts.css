@@ -28,6 +28,12 @@
     src: url(../fonts/FoglihtenDeH04.otf);
 }
 
+@font-face {
+    font-family: icons;
+    src: url(../fonts/icon-works-webfont.ttf);
+}
+
+
 .ironick {
     font-family: ironick;
 }
@@ -50,6 +56,10 @@
 
 .borders {
     font-family: borders;
+}
+
+.icons {
+    font-family: icons;
 }
 
 .color-white {

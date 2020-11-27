@@ -13,11 +13,19 @@ function add_image_markers(startDate = 0, endDate = 9999) {
 
     if (images.length > 0) {
         // Create marker for each image entry
+        let cameraIcon = L.icon({
+            iconUrl: '../img/camera.png',
+            iconSize: [30,30],
+            iconAnchor: [15,15]
+        });
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.year >= startDate && img.year <= endDate) {
 
-                let marker = L.marker([img.lat, img.lng], {rotationAngle: img.direction});
+                let marker = L.marker([img.lat, img.lng], {
+                    rotationAngle: img.direction,
+                    icon: cameraIcon
+                });
 
                 marker.attributes = {
                     "year": img.year,
