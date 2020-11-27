@@ -51,7 +51,7 @@ public class TimeMachineEdit extends HttpServlet {
         }
 
         if (op.equals("delete")) {
-
+            delete_data(request, response, session);
         }
     }
 
@@ -148,6 +148,71 @@ public class TimeMachineEdit extends HttpServlet {
         }
         catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+
+    private void delete_data(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        System.out.println("Deleting record...");
+
+        // The record to be deleted
+        String id = request.getParameter("id");
+        String title = request.getParameter("title");
+
+        // The table to delete from
+        String table = request.getParameter("source");
+        System.out.println("table = " + table);
+
+        if (table.equals("images")) {
+            String sql = "delete from images where id = " + id + " and title = '" + title + "'";
+
+            // Send request to database
+            DbUtil db = new DbUtil();
+
+            try {
+                if (db.modifyDB(sql)) {
+                    session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Image '" + title + "' deleted.");
+                }
+                else {
+                    session.setAttribute("message", "ERROR - Unable to delete point");
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            try {
+                response.sendRedirect("edit.jsp");
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (table.equals("slideshows")) {
+            String sql = "delete from slideshows where id = " + id + " and title = '" + title + "'";
+
+            // Send request to database
+            DbUtil db = new DbUtil();
+
+            try {
+                if (db.modifyDB(sql)) {
+                    session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Slideshow '" + title + "' deleted.");
+                }
+                else {
+                    session.setAttribute("message", "ERROR - Unable to delete point");
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            try {
+                response.sendRedirect("edit.jsp");
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -38,7 +38,8 @@ function add_image_markers(startDate = 0, endDate = 9999) {
                     "description": img.description,
                     "userName": img.userName,
                     "imgURL": img.imgURL,
-                    "direction": img.direction
+                    "direction": img.direction,
+                    "source": "images"
                 };
 
                 // Set marker pop-up event
@@ -93,7 +94,7 @@ function open_img_modal(attr) {
 
 // Adds row to the edit list on the right hand side of the screen
 function add_edit_row(list, attr) {
-    let row = '<div class="row datarow"><div class="col-10">'+ attr.year + ' - ' + attr.title + '</div><div class="col-1"><a href="#" class="icons btnEdit" data-id="' + attr.id + '" data-title="' + attr.title + '">n</a></div><div class="col-1"><a href="#" class="icons btnDelete"  data-id="' + attr.id + '" data-title="' + attr.title + '">&ugrave;</a></div></div>'
+    let row = '<div class="row datarow"><div class="col-10">'+ attr.year + ' - ' + attr.title + '</div><div class="col-1"><a href="#" class="icons btnEdit" data-id="' + attr.id + '" data-title="' + attr.title + '" data-source="' + attr.source + '">n</a></div><div class="col-1"><a href="#" class="icons btnDelete"  data-id="' + attr.id + '" data-title="' + attr.title + '" data-source="' + attr.source + '">&ugrave;</a></div></div>'
     $(list).append(row);
 }
 
@@ -173,6 +174,8 @@ map.on('click', function (e) {
 
 
 
+
+
 $(document).ready(function() {
     // Load data from database
     $.ajax({
@@ -188,6 +191,20 @@ $(document).ready(function() {
 
             add_image_markers();
             add_slideshow_markers();
+
+            // Add event handlers
+            // Event for deleting item in list
+            $('.btnDelete').on('click', function(e) {
+                let record = $(this);
+                let recordID = record.data('id');
+                let recordTitle = record.data('title');
+                let source = record.data('source')
+                $('#lblDeleteTitle').html(recordTitle);
+                $('#deleteID').val(recordID);
+                $('#deleteTitle').val(recordTitle);
+                $('#deleteSource').val(source);
+                $('#modalDelete').modal('show');
+            })
         },
         error: function(x,y,z) {
             console.log(x);

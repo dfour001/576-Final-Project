@@ -150,7 +150,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Edit Slideshow Modal -->
         <div id="editFormModal-Slideshow" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
@@ -182,6 +183,36 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Object Modal -->
+        <div id="modalDelete" class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="full-modal gradient"></div>
+                    <button type="button" class="close color-gold dubba mr-2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="img-content">
+                        <div class="year-frame">
+                            <p class="color-gold fog04">6</p>
+                            <p class="color-gold ironick" style="margin: -10px; margin-bottom: -13px">Delete?</p>
+                            <p class="color-gold fog04">7</p>
+                        </div>
+                        <div class="picture-frame">
+                            <p id="imgTitle" class="color-gold ironick">Are you sure that you want to delete "<span id="lblDeleteTitle">This marker</span>"?</p>
+                            <h1 class="color-gold fog04">1</h1>
+                            <form action="TimeMachineEdit" method="post">
+                                <input type="hidden" name="op" value="delete">
+                                <input type="hidden" id="deleteID" name="id" value="">
+                                <input type="hidden" id ="deleteTitle" name="title" value="">
+                                <input type="hidden" id="deleteSource" name="source" value="">
+                                <button type="submit" class="btn color-gold">Yes</button>
+                                <button type="button" class="btn color-gold" data-dismiss="modal">No</button>
+                            </form>
+
                         </div>
                     </div>
                 </div>
