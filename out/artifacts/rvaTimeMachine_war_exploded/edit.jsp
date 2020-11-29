@@ -118,7 +118,7 @@
                             <h1 class="color-gold fog04">1</h1>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <form class="form color-gold" action="TimeMachineEdit" method="post">
+                                    <form class="form color-gold" action="TimeMachineEdit" method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="op" value="insert-image">
                                         <input type="hidden" name="lat" id="imgLat">
                                         <input type="hidden" name="lng" id="imgLng">
@@ -134,8 +134,8 @@
                                         <label for="direction">Direction (Which direction was the photographer looking?):</label><br>
                                         <input type="text" class="dial" data-min="0" data-max="365" data-width="100" data-cursor=true data-step="1" data-thickness=.3 data-fgColor="#cd8e2f" value="1" id="direction" name="direction">
                                         <br><br>
-                                        <label for="file">Load image file:</label><br>
-                                        <input type="file" name="file" size="50" />
+                                        <label for="imgFile">Load image file:</label><br>
+                                        <input type="file" name="imgFile" id="imgFile" size="50" />
                                         <br><br>
                                         <input type="submit" class="btn color-gold" value="submit">
                                         <button type="button" class="btn color-gold" data-dismiss="modal">Cancel</button>

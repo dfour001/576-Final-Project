@@ -5,14 +5,14 @@ import org.json.JSONObject;
 import org.postgresql.util.PSQLException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
 import java.sql.ResultSet;
 
+@MultipartConfig(maxFileSize = 1024 * 1024 * 2)
 @WebServlet("/TimeMachineEdit")
 public class TimeMachineEdit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -113,7 +113,7 @@ public class TimeMachineEdit extends HttpServlet {
 
     }
 
-    private void insert_image(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+    private void insert_image(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException, ServletException {
         System.out.println("Inserting image...");
         // Prep attributes
         String year = request.getParameter("year");
@@ -123,10 +123,40 @@ public class TimeMachineEdit extends HttpServlet {
         String username = (String)session.getAttribute("userID");
         String lat = request.getParameter("lat");
         String lng = request.getParameter("lng");
+        Part image = request.getPart("imgFile");
 
+        // This path will not work if put online.  This will need to be directed to a folder on the server
+        String imgPath = request.getServletContext().getRealPath("") + "/images";
+
+        // Save image to images folder
+        if (image != null) {
+            System.out.println("There's an image here!  It's: " + image.getName() + " " + image.getSubmittedFileName() + " " + image.getContentType());
+
+            System.out.println("imgPath = " + imgPath);
+            String fileName = image.getSubmittedFileName();
+
+            // Create the file directory if it does not exists
+            File fileDir = new File(imgPath);
+            if (!fileDir.exists()) {
+                fileDir.mkdirs();
+            }
+
+            // Save image file
+            try {
+                String fileExt = fileName.substring(fileName.length()-3);
+                System.out.println(fileExt);
+                if("jpg".equals(fileExt) || "png".equals(fileExt) || "gif".equals(fileExt)) {
+                    image.write(imgPath + File.separator + fileName);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        imgPath = "images";
         // Build sql
-        String sql = "insert into images (year, title, description, username, direction, geom) "
-                + "values (" + year + ", '" + title + "', '" + description + "', '" + username + "', " + direction + ", ST_SetSRID(ST_Point(" + lng + "," + lat + "), 4326))";
+        String sql = "insert into images (year, title, description, username, imgurl, direction, geom) "
+                + "values (" + year + ", '" + title + "', '" + description + "', '" + username + "', '" + imgPath + "/" + image.getSubmittedFileName() + "', " + direction + ", ST_SetSRID(ST_Point(" + lng + "," + lat + "), 4326))";
 
         // Send request to database
         DbUtil db = new DbUtil();

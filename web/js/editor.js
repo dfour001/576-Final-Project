@@ -83,7 +83,7 @@ function open_img_modal(attr) {
     // Setup modal with input attributes
     $('#imgYear').html(attr.year);
     $('#imgTitle').html(attr.title);
-    $('#imgImg').attr('src', 'https://picsum.photos/500/300');
+    $('#imgImg').attr('src', attr.imgURL);
     $('#imgDescription').html(attr.description);
     $('#imgUserName').html('- ' + attr.userName);
 
