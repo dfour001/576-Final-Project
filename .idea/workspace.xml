@@ -43,10 +43,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.html">
+        <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="101" column="162" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="162" />
+            <state relative-caret-position="245">
+              <caret line="158" column="228" selection-start-line="158" selection-start-column="176" selection-end-line="158" selection-end-column="228" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="153" column="33" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="306">
               <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
@@ -72,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="150" column="31" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="31" />
+            <state relative-caret-position="-460">
+              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -81,26 +105,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/slideshows/Template/slideshow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="374">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/edit/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="139" column="72" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
+            <state relative-caret-position="272">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
@@ -108,15 +123,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="174">
               <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/slider.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -159,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java" />
         <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/loginRequest.java" />
         <option value="$PROJECT_DIR$/web/edit/logout.jsp" />
-        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java" />
         <option value="$PROJECT_DIR$/web/lib/markerRotate.js" />
         <option value="$PROJECT_DIR$/web/css/editorStyle.css" />
         <option value="$PROJECT_DIR$/web/lib/jquery.knob.js" />
@@ -169,11 +178,12 @@
         <option value="$PROJECT_DIR$/web/js/editor.js" />
         <option value="$PROJECT_DIR$/web/edit/index.jsp" />
         <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/slideshows/Template/slideshows/juneteenth.json" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/slideshows/Template/slideshow.html" />
         <option value="$PROJECT_DIR$/web/slideshows/Template/style/ss.css" />
+        <option value="$PROJECT_DIR$/web/slideshows/Template/slideshow.html" />
+        <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
       </list>
     </option>
   </component>
@@ -191,8 +201,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="437" />
-    <option name="y" value="-23" />
+    <option name="x" value="675" />
+    <option name="y" value="-8" />
     <option name="width" value="699" />
     <option name="height" value="744" />
   </component>
@@ -260,19 +270,6 @@
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="slideshows" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="slideshows" type="462c0819:PsiDirectoryNode" />
-              <item name="Template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -289,7 +286,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="576-final-project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606625581249" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606668436191" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -401,12 +398,12 @@
       <workItem from="1606335494759" duration="7293000" />
       <workItem from="1606413374808" duration="8527000" />
       <workItem from="1606615749019" duration="10415000" />
-      <workItem from="1606660903427" duration="2788000" />
+      <workItem from="1606660903427" duration="7081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73466000" />
+    <option name="totallyTimeSpent" value="77759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,9 +415,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48768473" visible="true" weight="0.27609682" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48768473" weight="0.571205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -521,24 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/loginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
@@ -580,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="155" column="27" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -607,29 +581,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/slider.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="139" column="72" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/slideshows/Template/slideshows/juneteenth.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -638,31 +591,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+    <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="150" column="31" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="31" />
+        <state relative-caret-position="306">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="101" column="162" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="162" />
+        <state relative-caret-position="-220">
+          <caret line="105" column="61" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/slideshows/Template/slideshow.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="374">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
+    <entry file="file://$PROJECT_DIR$/web/js/editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="95">
+          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="153" column="33" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="158" column="228" selection-start-line="158" selection-start-column="176" selection-end-line="158" selection-end-column="228" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-460">
+          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>

@@ -295,6 +295,7 @@ navbar-toggler {
     z-index: 9999;
     background-image: url('/img/Pattern10Navy.jpg');
     overflow: hidden;
+    display: none;
 }
 
 .leaflet-container {

@@ -131,9 +131,11 @@ public class DbUtil {
         String sql = "select id, year, title, description, username, imgurl, ST_Y(geom) lat, ST_X(geom) lng from slideshows";
 
         // If filtering by user name (in edit mode), add where clause
-        if (UserIDFilter == null) {
+        if (UserIDFilter != null) {
             sql += " where username = '" + UserIDFilter + "'";
         }
+
+        System.out.println("slideshow sql: " + sql);
 
         // Send query to database
         ResultSet r = queryDB(sql);
@@ -141,6 +143,7 @@ public class DbUtil {
         // Build slideshowList json array containing images
         try {
             if (r != null) {
+                System.out.println("FOUND SLIDESHOW");
                 while (r.next()) {
                     JSONObject s = new JSONObject();
                     s.put("id", r.getString("id"));
@@ -148,9 +151,10 @@ public class DbUtil {
                     s.put("title", r.getString("title"));
                     s.put("description", r.getString("description"));
                     s.put("username", r.getString("username"));
-                    s.put("imgurl", r.getString("imgurl"));
+                    s.put("imgURL", r.getString("imgurl"));
                     s.put("lat", r.getString("lat"));
                     s.put("lng", r.getString("lng"));
+                    slideshowList.put(s);
                 }
             }
         }

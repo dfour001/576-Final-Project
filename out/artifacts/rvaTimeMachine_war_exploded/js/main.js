@@ -62,15 +62,69 @@ function add_image_markers(startDate = 0, endDate = 9999) {
 }
 
 function add_slideshow_markers(startDate = 0, endDate = 9999) {
+    slideshowMarkers.clearLayers();
+
     if (slideshows.length > 0) {
         for (let i = 0; i < slideshows.length; i++) {
-            console.log(slideshows[i].title);
+            // Create marker for each slideshow entry
+            let slideshowIcon = L.icon({
+                iconUrl: '../img/camera.png',
+                iconSize: [30,30],
+                iconAnchor: [15,15]
+            });
+            for (let i = 0; i < slideshows.length; i++) {
+                let img = slideshows[i];
+                if (img.year >= startDate && img.year <= endDate) {
+
+                    let marker = L.marker([img.lat, img.lng], {
+                    });
+
+                    marker.attributes = {
+                        "year": img.year,
+                        "title": img.title,
+                        "description": img.description,
+                        "userName": img.userName,
+                        "imgURL": img.imgURL,
+                        "direction": img.direction
+                    };
+
+                    // Set marker pop-up event
+                    marker.on('click', function() {
+                        open_slideshow(img.imgURL);
+                    })
+
+                    slideshowMarkers.addLayer(marker);
+                }
+            }
         }
+
+        // Trigger slideshow from pop-up
+        $('.launchSlideshow').on('click', function() {
+            console.log('click');
+            let path = $(this).data('path');
+            open_slideshow(path);
+        })
     } else {
         console.log("No slideshows to add");
     }
 }
 
+
+// Opens slideshow
+function open_slideshow(path) {
+    console.log("open_slideshow");
+    $.ajax({
+        url: path,
+        dataType: "html",
+        success: function(d) {
+            $('#slideshow').html(d);
+            $('#slideshow').show();
+        },
+        error: function() {
+            console.log("Error loading slideshow");
+        }
+    });
+}
 
 // Opens image modal
 function open_img_modal(attr) {
@@ -118,6 +172,7 @@ $(document).ready(function () {
         dataType: "JSON",
         success: function (d) {
             console.log("Success!");
+            console.log(d);
             images = d.images;
             slideshows = d.slideshows;
             let neighborhoods = d.neighborhoods;
@@ -136,9 +191,6 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('#loading').fadeOut();
             }, 2000);
-
-            $('#slideshow').load("\\slideshows\\Template\\slideshow.html");
-            console.log("slideshow should be loaded now");
 
         },
         error: function (x, y, z) {
