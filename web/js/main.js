@@ -137,6 +137,9 @@ $(document).ready(function () {
                 $('#loading').fadeOut();
             }, 2000);
 
+            $('#slideshow').load("\\slideshows\\Template\\slideshow.html");
+            console.log("slideshow should be loaded now");
+
         },
         error: function (x, y, z) {
             // Update error message in splash screen

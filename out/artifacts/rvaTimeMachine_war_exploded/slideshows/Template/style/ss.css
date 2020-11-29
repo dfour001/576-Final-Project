@@ -1,0 +1,188 @@
+.slideshow-container {
+    background-image: url('/img/Pattern10Navy.jpg');
+    overflow: hidden;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+.ssClose {
+    z-index: 99999;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.background-gradient {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -2;
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slideshow {
+    margin: auto;
+    max-width: 600px;
+    height: calc(100vh);
+    position: relative;
+    overflow: hidden;
+
+    padding: 15px;
+    text-align: center;
+}
+
+#display {
+    position: relative;
+    height: 100vh;
+}
+
+.title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+
+    transition: opacity 0.5s;
+}
+
+
+.text {
+    position: absolute;
+    display: inline;
+    bottom: 75px;
+    left: 0px;
+    right: 0px;
+    /*transform: translateX(-50%);*/
+    max-height: 50%;
+    overflow-y: auto;
+
+    padding: 20px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    transition: opacity 0.5s;
+}
+
+.btnNext {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100px;
+    height: 50px;
+    color: #4c4c4c;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 10px;
+    cursor: pointer;
+    
+    transition: transform 1s;
+}
+
+
+#img {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+
+    background-position: center;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+
+}
+
+
+/**********************
+*** SLIDE ANIMATION ***
+**********************/
+
+.slideOut {
+    transform: translateY(-150vh);
+    transition: 0.25s;
+}
+
+.slideIn {
+    transform: translateY(150vh);
+}
+
+.slideShow {
+    transform: translateY(0);
+    transition: 0.75s;
+}
+
+.textHide {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.zoomIn {
+    transform: scale(1.2);
+    transition: 25s;
+}
+
+.zoomOut {
+    transform: scale(0.8);
+    transition: 25s;
+}
+
+
+/*********************************
+*** Next Slide Arrow Animation ***
+*********************************/
+
+.arrow {
+    position: absolute;
+    left: 35px;
+    top: 3px;
+    transform: rotate(-45deg);
+    border-left: 7px solid white;
+    border-bottom: 7px solid white;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    
+    animation: anim 3s linear 0s infinite;
+}
+
+@keyframes anim {
+    0% {
+        border-color: rgba(255,255,255,1);
+    }
+    
+    80% {
+        border-color: rgba(255,255,255,1);
+        transform: translateY(0px) rotate(-45deg);
+    }
+    90% {
+        border-color: rgba(255,255,255,0.5);
+        transform: translateY(5px) rotate(-45deg);
+    }
+    100% {
+        border-color: rgba(255,255,255,1);
+        transform: translateY(0px) rotate(-45deg);
+    }
+}
+
+.arrowHide {
+    transform: translateX(-50%) translateY(75px) rotateX(-180deg);
+    transition: transform 0.5s;
+}

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="slideshows/Template/style/ss.css"  />
+<div class='gradient full-screen'></div>
+    <div class='slideshow'>
+        <div id='display' class=''>
+            <h2 id='title' class='title ironick'></h2>
+            <p id='text' class='text'></p>
+            
+        </div>
+        
+        <div id="img"></div>
+            
+            <!--<img id='img' src="img/1.jpg">-->
+
+        <div id='btnNext' class='btnNext'>
+            <div class='arrow'></div>
+        </div>
+    </div>
+    <div class="ssClose color-gold dubba">&times;</div>
+    <script src="slideshows/Template/js/ss.js"></script>
+    <script>
+        $('.ssClose').on('click', function() {
+            $('#slideshow').html('');
+            $('#slideshow').hide();
+        })
+    </script>

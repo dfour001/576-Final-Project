@@ -291,6 +291,12 @@ navbar-toggler {
     color: #d4d2ce;
 }
 
+.slideshow-container {
+    z-index: 9999;
+    background-image: url('/img/Pattern10Navy.jpg');
+    overflow: hidden;
+}
+
 .leaflet-container {
     z-index: 0;
 }

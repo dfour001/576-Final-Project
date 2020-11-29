@@ -1,0 +1,76 @@
+{
+    "options": {
+        "option1": 1
+    },
+
+    "titlePage": {
+        "title": "Kari is cool",
+        "text": "This is the story of how cool Kari is.",
+        "images": [
+            {
+                "url": "img/3.jpg",
+                "animation": "img animation"
+            }
+        ]
+
+    },
+
+    "slides": [
+        {
+            "title": "How cool is she?",
+            "text": [
+                "",
+                "Well, that depends...",
+                "Sometimes she's just regular cool",
+                "but sometimes she's so cool that she..."
+        ],
+            "images": [
+                {
+                    "url": "img/1.jpg",
+                    "animation": "img animation"
+            },
+                {
+                    "url": "img url",
+                    "animation": "img animation"
+            }
+        ]
+
+    },
+        {
+            "title": "",
+            "text": [
+            "...plays cards!"
+        ],
+            "images": [
+                {
+                    "url": "img/3.jpg",
+                    "animation": "img animation"
+            },
+                {
+                    "url": "img url",
+                    "animation": "img animation"
+            }
+        ]
+
+    },
+        {
+            "title": "",
+            "text": [
+                "Sometimes she's crazy cool, like when she goes on walks in the park.",
+                "Then she's really cool!",
+                "Link test:<a href='http://www.google.com' target='_blank'>Google.com</a><br><br><img src='img/1.jpg' style='max-height: 50px'>"
+        ],
+            "images": [
+                {
+                    "url": "img/2.jpg",
+                    "animation": "img animation"
+            },
+                {
+                    "url": "img url",
+                    "animation": "img animation"
+            }
+        ]
+
+    }
+    ]
+}
