@@ -164,4 +164,27 @@ public class DbUtil {
 
         return slideshowList;
     }
+
+    public JSONArray get_neighborhoods() throws SQLException {
+        JSONArray n = new JSONArray();
+
+        String sql = "select n.name, count(*) count from neighborhoods n, images i where ST_Intersects(n.geom, i.geom) group by n.name";
+
+        ResultSet r = queryDB(sql);
+
+        if (r != null) {
+            try {
+                while (r.next()) {
+                    JSONObject c = new JSONObject();
+                    c.put("name", r.getString("name"));
+                    c.put("count", r.getString("count"));
+                    n.put(c);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return n;
+    }
 }
