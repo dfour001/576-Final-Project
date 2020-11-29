@@ -63,20 +63,22 @@ function add_image_markers(startDate = 0, endDate = 9999) {
 
 function add_slideshow_markers(startDate = 0, endDate = 9999) {
     slideshowMarkers.clearLayers();
+    console.log("Slideshows: " + slideshows.length);
 
     if (slideshows.length > 0) {
-        for (let i = 0; i < slideshows.length; i++) {
             // Create marker for each slideshow entry
             let slideshowIcon = L.icon({
-                iconUrl: '../img/camera.png',
+                iconUrl: '../img/story.png',
                 iconSize: [30,30],
                 iconAnchor: [15,15]
             });
             for (let i = 0; i < slideshows.length; i++) {
                 let img = slideshows[i];
+                console.log(img.title);
                 if (img.year >= startDate && img.year <= endDate) {
 
                     let marker = L.marker([img.lat, img.lng], {
+                        icon: slideshowIcon
                     });
 
                     marker.attributes = {
@@ -96,14 +98,7 @@ function add_slideshow_markers(startDate = 0, endDate = 9999) {
                     slideshowMarkers.addLayer(marker);
                 }
             }
-        }
 
-        // Trigger slideshow from pop-up
-        $('.launchSlideshow').on('click', function() {
-            console.log('click');
-            let path = $(this).data('path');
-            open_slideshow(path);
-        })
     } else {
         console.log("No slideshows to add");
     }

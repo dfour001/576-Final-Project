@@ -1,0 +1,70 @@
+{
+    "options": {
+        "option1": 1
+    },
+
+    "titlePage": {
+        "title": "Virginia State Capitol Building",
+        "text": "<small>The capitol building as it appears today</small>",
+        "images": [
+            {
+                "url": "slideshows/Capitol/img/1.jpg",
+                "animation": "img animation"
+            }
+        ]
+
+    },
+
+    "slides": [
+        {
+            "title": "Early history",
+            "text": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        ],
+            "images": [
+                {
+                    "url": "slideshows/Capitol/img/2.png",
+                    "animation": "zoomIn"
+            }
+        ]
+
+    },
+        {
+            "title": "",
+            "text": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        ],
+            "images": [
+                {
+                    "url": "slideshows/Template/img/19-4.jpg",
+                    "animation": "img animation"
+            },
+                {
+                    "url": "img url",
+                    "animation": "img animation"
+            }
+        ]
+
+    },
+        {
+            "title": "",
+            "text": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ],
+            "images": [
+                {
+                    "url": "slideshows/Capitol/img/3.jpg",
+                    "animation": "zoomOut"
+            },
+                {
+                    "url": "img url",
+                    "animation": "img animation"
+            }
+        ]
+
+    }
+        
+    ]
+}

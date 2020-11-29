@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="177">
+              <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -114,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="306">
+              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -152,6 +152,7 @@
       <find>imgImg</find>
       <find>about</find>
       <find>gradient</find>
+      <find>size</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -179,10 +180,10 @@
         <option value="$PROJECT_DIR$/web/edit/index.jsp" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/slideshows/Template/slideshows/juneteenth.json" />
-        <option value="$PROJECT_DIR$/web/slideshows/Template/style/ss.css" />
         <option value="$PROJECT_DIR$/web/slideshows/Template/slideshow.html" />
         <option value="$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/DbUtil.java" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/slideshows/Template/style/ss.css" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
       </list>
     </option>
@@ -200,7 +201,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="675" />
     <option name="y" value="-8" />
     <option name="width" value="699" />
@@ -270,6 +271,27 @@
               <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="slideshows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="slideshows" type="462c0819:PsiDirectoryNode" />
+              <item name="Template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="slideshows" type="462c0819:PsiDirectoryNode" />
+              <item name="Template" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="576-Final-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="576-Final-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -286,7 +308,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="576-final-project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606668436191" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606672068472" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -398,12 +420,12 @@
       <workItem from="1606335494759" duration="7293000" />
       <workItem from="1606413374808" duration="8527000" />
       <workItem from="1606615749019" duration="10415000" />
-      <workItem from="1606660903427" duration="7081000" />
+      <workItem from="1606660903427" duration="10243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77759000" />
+    <option name="totallyTimeSpent" value="80921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -415,10 +437,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48768473" weight="0.571205" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48768473" weight="0.5711044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -591,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
@@ -636,16 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="158" column="228" selection-start-line="158" selection-start-column="176" selection-end-line="158" selection-end-column="228" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -660,10 +665,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/danielfourquet/rvatimemachine/TimeMachineEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="158" column="228" selection-start-line="158" selection-start-column="176" selection-end-line="158" selection-end-column="228" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/slideshows/Template/style/ss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="306">
+          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
         </state>
       </provider>
     </entry>
