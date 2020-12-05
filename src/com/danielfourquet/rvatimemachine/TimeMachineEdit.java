@@ -47,7 +47,7 @@ public class TimeMachineEdit extends HttpServlet {
         }
 
         if (op.equals("update")) {
-
+            update_image(request, response, session);
         }
 
         if (op.equals("delete")) {
@@ -66,10 +66,10 @@ public class TimeMachineEdit extends HttpServlet {
 
         try {
             // Get Images
-            JSONArray imgList = db.get_images(userID);
+            JSONArray imgList = db.get_images(request, userID);
 
             // Get Slideshows
-            JSONArray slideshowList = db.get_slideshow(userID);
+            JSONArray slideshowList = db.get_slideshow(request, userID);
 
             // Get Neighborhoods
             JSONArray nList = new JSONArray();
@@ -244,5 +244,45 @@ public class TimeMachineEdit extends HttpServlet {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    private void update_image(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        System.out.println("Updating record...");
+
+        // The record to be updated
+        String id = request.getParameter("id");
+        String year = request.getParameter("year");
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String direction = request.getParameter("direction");
+
+
+        String sql = "update images set year = " + year + ", title = '" + title + "', description = '" + description + "', direction = " + direction + " where id = " + id;
+
+        // Send request to database
+        DbUtil db = new DbUtil();
+
+        try {
+            if (db.modifyDB(sql)) {
+                session.setAttribute("message", "<span class='color-gold'>SUCCESS</span> - Image '" + title + "' updated.");
+            }
+            else {
+                session.setAttribute("message", "ERROR - Unable to update point");
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            response.sendRedirect("edit.jsp");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 }

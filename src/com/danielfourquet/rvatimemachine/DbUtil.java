@@ -1,8 +1,10 @@
 package com.danielfourquet.rvatimemachine;
 
+import com.sun.deploy.net.HttpRequest;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -83,15 +85,20 @@ public class DbUtil {
 
     }
 
-    public JSONArray get_images(String UserIDFilter) {
+    public JSONArray get_images(HttpServletRequest request, String UserIDFilter) {
         JSONArray imgList = new JSONArray();
 
         // Base sql query to return all image markers
-        String sql = "select id, year, title, description, username, imgurl, direction, ST_Y(geom) lat, ST_X(geom) lng from images";
+        String sql = "select i.id, i.year, i.title, i.description, i.username, i.imgurl, i.direction, ST_Y(i.geom) lat, ST_X(i.geom) lng from images i";
 
         // If filtering by user name (in edit mode), add where clause
         if (UserIDFilter != null) {
                 sql += " where username = '" + UserIDFilter + "'";
+        }
+
+        // If filtering by neighborhood (in view mode), add where clause
+        if (request.getParameter("n") != null) {
+            sql += ", neighborhoods n where n.name = '" + request.getParameter("n") + "' and ST_Intersects(i.geom, n.geom)";
         }
 
         System.out.println(sql);
@@ -124,15 +131,21 @@ public class DbUtil {
         return imgList;
     }
 
-    public JSONArray get_slideshow(String UserIDFilter) {
+    public JSONArray get_slideshow(HttpServletRequest request, String UserIDFilter) {
         JSONArray slideshowList = new JSONArray();
 
         // Base sql query to return all image markers
-        String sql = "select id, year, title, description, username, imgurl, ST_Y(geom) lat, ST_X(geom) lng from slideshows";
+        String sql = "select s.id, s.year, s.title, s.description, s.username, s.imgurl, ST_Y(s.geom) lat, ST_X(s.geom) lng from slideshows s";
 
         // If filtering by user name (in edit mode), add where clause
         if (UserIDFilter != null) {
             sql += " where username = '" + UserIDFilter + "'";
+        }
+
+        System.out.println("--- n = " + request.getParameter("n") + " ---");
+        // If filtering by neighborhood (in view mode), add where clause
+        if (request.getParameter("n") != null) {
+            sql += ", neighborhoods n where n.name = '" + request.getParameter("n") + "' and ST_Intersects(s.geom, n.geom)";
         }
 
         System.out.println("slideshow sql: " + sql);
@@ -168,7 +181,7 @@ public class DbUtil {
     public JSONArray get_neighborhoods() throws SQLException {
         JSONArray n = new JSONArray();
 
-        String sql = "select n.name, count(*) count from neighborhoods n, images i where ST_Intersects(n.geom, i.geom) group by n.name";
+        String sql = "select n.name, count(*) count from neighborhoods n, (select geom from images union select geom from slideshows) i where ST_Intersects(n.geom, i.geom) group by n.name";
 
         ResultSet r = queryDB(sql);
 

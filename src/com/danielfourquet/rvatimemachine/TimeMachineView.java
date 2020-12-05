@@ -19,10 +19,10 @@ public class TimeMachineView extends HttpServlet {
         DbUtil db = new DbUtil();
         try {
             // Get Images
-            JSONArray imgList = db.get_images(null);
+            JSONArray imgList = db.get_images(request,null);
 
             // Get Slideshows
-            JSONArray slideshowList = db.get_slideshow(null);
+            JSONArray slideshowList = db.get_slideshow(request,null);
 
             // Get Neighborhoods
             JSONArray nList = db.get_neighborhoods();

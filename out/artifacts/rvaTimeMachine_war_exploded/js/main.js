@@ -144,23 +144,58 @@ function create_neighborhood_filter(neighborhoods) {
     let html = '';
     
     // Filter by all neighborhoods:
-    html += '<a class="dropdown-item" href="#">Show All <span class="badge badge-pill badge-primary">' + total + '</span></a><hr>';
+    html += '<a class="dropdown-item neighborhood" href="#" data-name="Show All">Show All <span class="badge badge-pill badge-primary">' + total + '</span></a><hr>';
     
     // Filter by individual neighborhoods:
     for (let i = 0; i < neighborhoods.length; i++) {
         let n = neighborhoods[i];
-        html += '<a class="dropdown-item" href="#">' + n.name + ' <span class="badge badge-pill badge-primary">' + n.count + '</span></a>';
+        html += '<a class="dropdown-item neighborhood" href="#" data-name = "' + n.name + '">' + n.name + ' <span class="badge badge-pill badge-primary">' + n.count + '</span></a>';
     }
     
     
     $('#neighborhoodFilter').html(html);
+
+    $('.neighborhood').on('click', function() {
+        let n = $(this).data('name');
+        console.log(n);
+
+        if (n == 'Show All') {
+            load_data();
+            let b = $('#lblStartYear').html();
+            let e = $('#lblEndYear').html();
+            console.log(b, e);
+            add_image_markers(b, e);
+            add_slideshow_markers(b, e);
+        } else {
+            get_markers_by_neighborhood(n);
+        }
+    });
 }
 
-$(document).ready(function () {
-    // Splash screen is displayed
-    $('#cityName').html(config.cityName);
-    console.log(config.dbURL);
-    // Load data from database
+// Reloads markers with neighborhood filter
+function get_markers_by_neighborhood(n) {
+    $.ajax({
+        method: 'POST',
+        url: config.dbURL,
+        dataType: "JSON",
+        data: {"n": n},
+        success: function (d) {
+            console.log("Success!");
+            console.log(d);
+            images = d.images;
+            slideshows = d.slideshows;
+
+            add_image_markers();
+            add_slideshow_markers();
+        },
+        error: function() {
+            console.log('Error loading markers.')
+        }
+    });
+}
+
+
+function load_data() {
     $.ajax({
         method: 'POST',
         url: config.dbURL,
@@ -175,18 +210,6 @@ $(document).ready(function () {
             add_image_markers();
             add_slideshow_markers();
             create_neighborhood_filter(neighborhoods);
-
-            // Show main site under splash screen
-            $('#main').show();
-            map.invalidateSize(); // Update map after show()ing it
-
-            $('#loadingStatus').html('Initializing Flux Capacitor');
-
-            // Hide splash screen
-            setTimeout(function () {
-                $('#loading').fadeOut();
-            }, 2000);
-
         },
         error: function (x, y, z) {
             // Update error message in splash screen
@@ -196,5 +219,25 @@ $(document).ready(function () {
             console.log(z);
         }
     })
+}
+
+$(document).ready(function () {
+    // Splash screen is displayed
+    $('#cityName').html(config.cityName);
+    console.log(config.dbURL);
+
+    // Load data from database
+    load_data();
+
+    // Show main site under splash screen
+    $('#main').show();
+    map.invalidateSize(); // Update map after showing it
+
+    $('#loadingStatus').html('Initializing Flux Capacitor');
+
+    // Hide splash screen
+    setTimeout(function () {
+        $('#loading').fadeOut();
+    }, 2000);
 
 });

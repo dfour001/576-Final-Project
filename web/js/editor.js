@@ -67,10 +67,48 @@ function add_image_markers(startDate = 0, endDate = 9999) {
 
 }
 
+
+function get_image_marker_by_id(id) {
+    let markers = imageMarkers.getLayers();
+    for (let i = 0; i < markers.length; i++) {
+        let markerID = markers[i].attributes.id;
+        if (markerID == id) {
+            return markers[i]
+        }
+    }
+
+    return null
+}
+
 function add_slideshow_markers(startDate = 0, endDate = 9999) {
     if (slideshows.length > 0) {
+        let slideshowIcon = L.icon({
+            iconUrl: '../img/story.png',
+            iconSize: [30,30],
+            iconAnchor: [15,15]
+        });
+
         for (let i = 0; i < slideshows.length; i++) {
-            console.log(slideshows[i].title);
+            let slideshow = slideshows[i];
+            if (slideshow.year >= startDate && slideshow.year <= endDate) {
+                let marker = L.marker([slideshow.lat, slideshow.lng], {
+                    icon: slideshowIcon
+                });
+
+                marker.attributes = {
+                    "id": slideshow.id,
+                    "year": slideshow.year,
+                    "title": slideshow.title,
+                    "source": "slideshow"
+                };
+
+                // Add row to slideshow edit list
+                add_edit_row("#slideshowList", marker.attributes);
+
+                slideshowMarkers.addLayer(marker);
+            }
+
+
         }
     } else {
         console.log("No slideshows to add");
@@ -135,6 +173,12 @@ $('#btnAddSlideshow').on('click', function () {
     $('#editMap').css('cursor', 'crosshair');
     
     map_notification("Click on a location in the map to place a <span class='color-gold'>slideshow</span> marker");
+});
+
+
+// Reset form on modal close
+$('#editFormModal-Image').on('hidden.bs.modal', function() {
+    $("#formEditImage")[0].reset();
 });
 
 // Event to insert image or slideshow markers
@@ -204,7 +248,27 @@ $(document).ready(function() {
                 $('#deleteTitle').val(recordTitle);
                 $('#deleteSource').val(source);
                 $('#modalDelete').modal('show');
-            })
+            });
+
+            // Event for editing item in list
+            $('.btnEdit').on('click', function() {
+                let record = $(this);
+                let recordID = record.data('id');
+                let marker = get_image_marker_by_id(recordID);
+
+                console.log(marker);
+
+                // Set edit form inputs to editing mode
+                $('#imgOp').val('update');
+                $('#imgEditID').val(recordID);
+                $('#imgEditYear').val(marker.attributes.year);
+                $('#imgEditTitle').val(marker.attributes.title);
+                $('#imgEditDescription').val(marker.attributes.description);
+                $('#imgEditDirection').val(marker.attributes.direction);
+
+                // Show edit form modal
+                $('#editFormModal-Image').modal('show');
+            });
         },
         error: function(x,y,z) {
             console.log(x);

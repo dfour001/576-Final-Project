@@ -118,24 +118,25 @@
                             <h1 class="color-gold fog04">1</h1>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <form class="form color-gold" action="TimeMachineEdit" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" name="op" value="insert-image">
+                                    <form id="formEditImage" class="form color-gold" action="TimeMachineEdit" method="post" enctype="multipart/form-data">
+                                        <input id="imgOp" type="hidden" name="op" value="insert-image">
+                                        <input id="imgEditID" type="hidden" name="id" value="none">
                                         <input type="hidden" name="lat" id="imgLat">
                                         <input type="hidden" name="lng" id="imgLng">
-                                        <label for="year">Year:</label><br>
-                                        <input type="number" name="year" id="year" value="2020" class="full-width">
+                                        <label for="imgEditYear">Year:</label><br>
+                                        <input type="number" name="year" id="imgEditYear" value="2020" class="full-width">
                                         <br>
-                                        <label for="title">Marker Title:</label><br>
-                                        <input type="text" name="title" id="title" class="full-width">
+                                        <label for="imgEditTitle">Marker Title:</label><br>
+                                        <input type="text" name="title" id="imgEditTitle" class="full-width">
                                         <br>
-                                        <label for="description">Description:</label><br>
-                                        <textarea type="text" name="description" id="description" class="full-width"></textarea>
+                                        <label for="imgEditDescription">Description:</label><br>
+                                        <textarea type="text" name="description" id="imgEditDescription" class="full-width"></textarea>
                                         <br><br>
-                                        <label for="direction">Direction (Which direction was the photographer looking?):</label><br>
-                                        <input type="text" class="dial" data-min="0" data-max="365" data-width="100" data-cursor=true data-step="1" data-thickness=.3 data-fgColor="#cd8e2f" value="1" id="direction" name="direction">
+                                        <label for="imgEditDirection">Direction (Which direction was the photographer looking?):</label><br>
+                                        <input type="text" class="dial" data-min="0" data-max="365" data-width="100" data-cursor=true data-step="1" data-thickness=.3 data-fgColor="#cd8e2f" value="1" id="imgEditDirection" name="direction">
                                         <br><br>
-                                        <label for="imgFile">Load image file:</label><br>
-                                        <input type="file" name="imgFile" id="imgFile" size="50" />
+                                        <label for="imgEditFile">Load image file:</label><br>
+                                        <input type="file" name="imgFile" id="imgEditFile" size="50" />
                                         <br><br>
                                         <input type="submit" class="btn color-gold" value="submit">
                                         <button type="button" class="btn color-gold" data-dismiss="modal">Cancel</button>
